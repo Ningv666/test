@@ -3,7 +3,7 @@
     <div class="container-left">
       <h3>Camera Preview</h3>
       <div class="container-left_head">
-        <video style="width: 400rpx; height: 400rpx"></video>
+        <video style="width: 100%; height: 100%"></video>
         <div class="overlay">
           <p>{{ message }}</p>
         </div>
@@ -13,6 +13,7 @@
           class="input"
           v-model="inputWords"
           placeholder="请输入内容"
+          maxLength="10"
         ></el-input>
         <el-button type="primary" round @click="showWords">显示文字</el-button>
         <el-button round type="danger" @click="clearWords">清除文字</el-button>
@@ -110,32 +111,39 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   video {
     position: relative;
     z-index: 0;
   }
 }
 .container-left {
-  min-width: 70%;
+  margin-left: 10%;
+  min-width: 50%;
   overflow: auto;
   &_head {
     position: relative;
+    margin: 30px;
     .overlay {
       position: absolute;
       bottom: 20px;
-      left: 20%;
+      left: 10%;
       z-index: 1;
       p {
         margin: 0px;
         line-height: 60px;
         color: aquamarine;
         font-size: 60px;
+        width: 500px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
       }
     }
   }
   &_operator {
-    margin: 20px;
+    margin-top: 10px 10px 0px;
     white-space: nowrap;
   }
   .input {
@@ -144,16 +152,17 @@ export default {
   }
 }
 .container-right {
-  width: 20%;
+  width: 25%;
   padding-left: 30px;
   // min-height: 500px;
   // overflow: auto;
   &_list {
     height: 500px;
     overflow: auto;
+    margin-top: 30px;
   }
   canvans {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 }
 </style>
