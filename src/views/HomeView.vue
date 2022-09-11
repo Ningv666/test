@@ -117,14 +117,14 @@ export default {
   }
 }
 .container-left {
-  min-width: 60%;
+  min-width: 70%;
   overflow: auto;
   &_head {
     position: relative;
     .overlay {
       position: absolute;
       bottom: 20px;
-      left: 10%;
+      left: 20%;
       z-index: 1;
       p {
         margin: 0px;
@@ -144,7 +144,7 @@ export default {
   }
 }
 .container-right {
-  width: 30%;
+  width: 20%;
   padding-left: 30px;
   // min-height: 500px;
   // overflow: auto;
