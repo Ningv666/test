@@ -4,7 +4,7 @@
 ```
 npm install
 ```
-
+<!-- 主要内容 都在 HomeView.vue 中 -->
 ### Compiles and hot-reloads for development
 ```
 npm run serve
